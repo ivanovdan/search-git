@@ -1,0 +1,60 @@
+#container {
+    margin: 0 auto;
+    width: 50%;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#userInput {
+    width: 900px;
+}
+
+#avatar {
+    width: 150px;
+    padding: 20px 0 5px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.thumb {
+    width: 30px;
+    padding-right: 5px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left {
+    width: 25%;
+    text-align: center;
+}
+
+.right {
+    padding-left: 30px;
+}
+
+.error {
+    color: red;
+    padding-top: 5px;
+}
+
+ul {
+    padding: 0;
+}
+
+#users {
+    cursor: pointer;
+}
