@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
       // get the list of users
       this.usersService.getUsers(value)
         .then(users => {
-          this.gitUsers = users.items;
+          this.gitUsers = users;
         });
     }
   }

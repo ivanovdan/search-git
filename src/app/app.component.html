@@ -7,8 +7,8 @@
   </div>
   <div *ngIf="isError" class="error">There was an error!</div>
   <div *ngIf="showRepos">
-    <ul>
-      <li *ngFor="let user of gitUsers">
+    <ul *ngIf="gitUsers">
+      <li *ngFor="let user of gitUsers.items">
         <span (click)="getRepos(user.login)" id="users">
           <img class="thumb" src="{{user.avatar_url}}">{{ user.login }}
         </span>
@@ -17,22 +17,22 @@
   </div>
   <div *ngIf="!showRepos" class="row">
     <div class="column left">
-      <a href="{{userUrl}}" target="blank">
+      <a href="{{userUrl}}" target="_blank">
         <img src="{{avatar}}" id="avatar">
-        <div>{{user.login}}</div>
+        <div id="userLogin">{{user.login}}</div>
       </a>
     </div>
     <div class="column right">
       <h2>Repositories</h2>
       <ul>
         <li *ngFor="let repo of gitRepos">
-          <a href="{{repo.html_url}}" target="blank">{{ repo.name }}</a>
+          <a href="{{repo.html_url}}" target="_blank">{{ repo.name }}</a>
         </li>
       </ul>
       <h2 *ngIf="!noGists">Gists</h2>
       <ul>
         <li *ngFor="let gist of gitGists">
-          <a href="https://gist/github.com/{{gist.owner.login}}/{{gist.id}}" target="blank">{{ gist.description }}</a>
+          <a href="https://gist.github.com/{{gist.owner.login}}/{{gist.id}}" target="_blank">{{ gist.description }}</a>
         </li>
       </ul>
     </div>

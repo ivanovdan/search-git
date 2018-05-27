@@ -14,7 +14,11 @@ h1 {
 
 #avatar {
     width: 150px;
-    padding: 20px 0 5px 0;
+    padding: 20px 0 0 0;
+}
+
+#userLogin {
+    text-align: center;
 }
 
 li {
@@ -39,7 +43,6 @@ li {
 
 .left {
     width: 25%;
-    text-align: center;
 }
 
 .right {
